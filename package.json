@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "prepare": "npm run compile",
+    "prepare": "husky install",
+    "postinstall": "husky install",
     "build-html": "tsc && vite build --mode html",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -12,7 +13,6 @@
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue,.tsx ./src",
     "lint:prettier": "prettier --write src/",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
-    "postinstall": "husky install",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
