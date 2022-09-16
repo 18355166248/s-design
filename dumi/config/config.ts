@@ -1,6 +1,9 @@
-import { join } from 'path';
+import {join} from 'path';
 
 export default {
+  mode: 'site',
+  favicon: '/images/jian.jpeg',
+  logo: '/images/jian.jpeg',
   chainWebpack(memo) {
     memo.plugins.delete('copy');
 
