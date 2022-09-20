@@ -1,11 +1,12 @@
 import {join} from 'path';
 
 export default {
+  outputPath: '../dist', // 打包到项目根路径
   mode: 'site',
-  favicon: '/images/jian.jpeg',
-  logo: '/images/jian.jpeg',
+  favicon: '/logo.svg',
+  logo: '/logo.svg',
   chainWebpack(memo) {
-    memo.plugins.delete('copy');
+    // memo.plugins.delete('copy'); // TODO: 这行会影响静态资源的打包
 
     memo.module
       .rule('js')
