@@ -5,6 +5,7 @@ hero:
   desc: React 组件库(业务/非业务)
   actions:
     - text: SMegalo
+      link: /introduce
 # features:
 #   - icon: https://gw.alipayobjects.com/zos/bmw-prod/813f5ed9-6bc4-43d4-9f74-ec81ecf35733/k7htg6n4_w144_h144.png
 #     title: 阅读舒适
