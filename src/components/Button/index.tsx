@@ -1,9 +1,12 @@
 import type {FC} from 'react';
-import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
-const Button: FC = () => {
-  return <div className="button">textBtn1</div>;
+interface Props {
+  children?: React.ReactNode;
+}
+
+const Button: FC<Props> = ({children}) => {
+  return <div className={styles.button}>{children}</div>;
 };
 
 export default Button;

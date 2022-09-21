@@ -1,4 +1,5 @@
 import {join} from 'path';
+import {sideMenu} from './sideMenuData';
 
 export default {
   outputPath: '../dist', // 打包到项目根路径
@@ -6,12 +7,17 @@ export default {
   favicon: '/logo.svg',
   logo: '/logo.svg',
   dynamicImport: {}, // 是否启用按需加载
-  // links: [{rel: 'manifest', href: '/asset-manifest.json'}],
+  resolve: {
+    includes: ['docs', '../src/components'],
+  },
   navs: [
     {title: '设计', path: '/introduce'},
     {title: '组件', path: '/components'},
     {title: 'GitHub', path: 'https://github.com/18355166248'},
   ],
+  menus: {
+    '/components': sideMenu,
+  },
   chainWebpack(memo) {
     // memo.plugins.delete('copy'); // TODO: 这行会影响静态资源的打包
 

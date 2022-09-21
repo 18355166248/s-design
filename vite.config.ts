@@ -1,16 +1,16 @@
-import { defineConfig, UserConfig } from 'vite';
+import {defineConfig, UserConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import typescriptRollup from '@rollup/plugin-typescript';
 
-const { version } = require('./package.json');
+const {version} = require('./package.json');
 
 console.log('version', version);
 
 const resolvePath = (str: string) => path.resolve(__dirname, str);
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }: UserConfig) => {
+export default defineConfig(({mode}: UserConfig) => {
   if (mode === 'html') {
     return {
       plugins: [react()],
@@ -26,7 +26,7 @@ export default defineConfig(({ mode }: UserConfig) => {
       lib: {
         entry: resolvePath('src/components/index.ts'),
         name: 's-design',
-        fileName: (format) => `s-design.${format}.js`,
+        fileName: format => `s-design.${format}.js`,
       },
       rollupOptions: {
         external: ['react', 'react-dom'],
