@@ -3,10 +3,12 @@ nav:
   path: /components
 ---
 
+按钮用于开始一个即时操作。
+
+## 使用场景
+
+标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+
+## 代码演示
+
 <code src="./demo/demo1.tsx" />
-
-<br />
-
-```tsx | pure
-<Button>测试按钮111</Button>
-```
