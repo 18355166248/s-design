@@ -1,6 +1,6 @@
 import {createRef, forwardRef} from 'react';
-import {tuple} from '../_utils/type';
-import type {SizeType} from '../cnfig-provider/SizeContext';
+import {tuple} from '../../_utils/type';
+import type {SizeType} from '../config-provider/SizeContext';
 import styles from './index.module.scss';
 import classNames from 'classnames';
 
@@ -27,6 +27,7 @@ export interface BaseButtonProps {
 }
 
 // 区分标签按钮和普通按钮
+// a标签
 export type AnchorButtonProps = {
   href: string;
   target?: string;
@@ -34,6 +35,7 @@ export type AnchorButtonProps = {
 } & BaseButtonProps &
   Omit<React.AnchorHTMLAttributes<never>, 'type' | 'onClick'>;
 
+// 按钮
 export type NativeButtonProps = {
   htmlType?: ButtonHTMLType;
   onClick?: React.MouseEventHandler<HTMLElement>;
@@ -50,7 +52,9 @@ const BaseButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
 
   const buttonRef = (ref as any) || createRef<HTMLElement>();
 
-  const formatClassName = '';
+  const prefixCls = getPrefixCls('btn');
+
+  const formatClassName = classNames();
 
   const buttonNode = (
     <button
