@@ -5,9 +5,13 @@
  */
 import React, {useState} from 'react';
 import Button from '../index';
+import '../style/index.less';
 
 export default () => {
-  const [pass, setPass] = useState<boolean>();
-
-  return <Button>测试按钮</Button>;
+  return (
+    <div className="common-space">
+      <Button className="mb-3">Default Button</Button>
+      <Button type="primary">Primary Button</Button>
+    </div>
+  );
 };

@@ -33,4 +33,5 @@ export default {
   alias: {
     '@': join(__dirname, '../../', 'src'),
   },
+  links: [{rel: 'stylesheet', href: '/common.css'}],
 };

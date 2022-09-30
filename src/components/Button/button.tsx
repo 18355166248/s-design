@@ -1,8 +1,8 @@
-import {createRef, forwardRef} from 'react';
+import React, {createRef, forwardRef} from 'react';
 import {tuple} from '../../_utils/type';
 import type {SizeType} from '../config-provider/SizeContext';
-import styles from './index.module.scss';
 import classNames from 'classnames';
+import {ConfigContext} from '../config-provider/ConfigContext';
 
 const ButtonTypes = tuple(
   'default',
@@ -48,13 +48,23 @@ const BaseButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
   props,
   ref
 ) => {
-  const {htmlType, disabled, className, ...otherProps} = props;
+  const {
+    type = 'default',
+    htmlType,
+    disabled,
+    className,
+    ...otherProps
+  } = props;
 
   const buttonRef = (ref as any) || createRef<HTMLElement>();
 
+  const {getPrefixCls} = React.useContext(ConfigContext);
+
   const prefixCls = getPrefixCls('btn');
 
-  const formatClassName = classNames();
+  const formatClassName = classNames(prefixCls, {
+    [`${prefixCls}-${type}`]: type,
+  });
 
   const buttonNode = (
     <button
