@@ -32,6 +32,48 @@
   border-radius: @border-radius;
 }
 
+.button-variant-primary(@color; @background; @backgroundHover: yellow; @backgroundActive: yellow) {
+  .button-color(@color; @background; @background);
+
+  text-shadow: @btn-text-shadow;
+  box-shadow: @btn-primary-shadow;
+
+  &:hover,
+  &:focus {
+    & when (@theme = dark) {
+      .button-color(
+        @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
+      );
+    }
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        @color; ~`colorPalette('@{background}', 5) `; ~`colorPalette('@{background}', 5) `
+      );
+    }
+    & when (@theme = variable) {
+      .button-color(@color; @backgroundHover; @backgroundHover);
+    }
+  }
+
+  &:active {
+    & when (@theme = dark) {
+      .button-color(
+        @color; ~`colorPalette('@{background}', 5) `; ~`colorPalette('@{background}', 5) `
+      );
+    }
+    & when (not (@theme = dark) and not (@theme = variable)) {
+      .button-color(
+        @color; ~`colorPalette('@{background}', 7) `; ~`colorPalette('@{background}', 7) `
+      );
+    }
+    & when (@theme = variable) {
+      .button-color(@color; @backgroundActive; @backgroundActive);
+    }
+  }
+
+  .button-disabled();
+}
+
 .btn {
   position: relative;
   display: inline-block;
@@ -59,6 +101,10 @@
     text-decoration: none;
     background: @btn-default-bg;
   }
+}
+
+.btn-primary() {
+  .button-variant-primary(@btn-primary-color; @btn-primary-bg; @primary-color-hover; @primary-color-active);
 }
 
 .button-variant-default(@color; @background; @border) {

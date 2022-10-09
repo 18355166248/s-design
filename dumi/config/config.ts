@@ -33,5 +33,11 @@ export default {
   alias: {
     '@': join(__dirname, '../../', 'src'),
   },
-  links: [{rel: 'stylesheet', href: '/common.css'}],
+  links: [
+    {rel: 'stylesheet', href: '/common.css'},
+    {
+      rel: 'stylesheet',
+      href: 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css',
+    },
+  ],
 };
