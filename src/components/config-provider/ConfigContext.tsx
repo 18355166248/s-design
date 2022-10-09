@@ -1,13 +1,13 @@
 import {createContext} from 'react';
 import {basePrefixCls} from './config';
 
-export interface getPrefixCls {
+export interface getPrefixClsInterface {
   suffixCls: string;
   customizePrefixCls?: string;
 }
 
 export interface ConfigContextProps {
-  getPrefixCls: (getPrefixCls) => string;
+  getPrefixCls: (suffixCls: string, customizePrefixCls?: string) => string;
 }
 
 const defaultGetPrefixCls = (

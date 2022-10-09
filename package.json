@@ -3,6 +3,10 @@
   "description": "SMegalo组件库",
   "private": true,
   "version": "0.0.0",
+  "files": ["dist"],
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./typings.d.ts",
   "scripts": {
     "dumi": "cross-env APP_ROOT=dumi dumi dev",
     "dumi-build": "cross-env APP_ROOT=dumi dumi build",

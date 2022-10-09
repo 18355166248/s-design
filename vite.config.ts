@@ -25,10 +25,14 @@ export default defineConfig(({mode}: UserConfig) => {
     build: {
       lib: {
         entry: resolvePath('src/components/index.ts'),
-        name: 's-design',
-        fileName: format => `s-design.${format}.js`,
+        name: 'index',
+        fileName: format => `index.${format}.js`,
+        formats: ['es', 'umd'],
       },
       rollupOptions: {
+        input: {
+          Button: resolvePath('src/components/Button/index.tsx'),
+        },
         external: ['react', 'react-dom'],
         output: {
           globals: {

@@ -4,8 +4,8 @@
  * hideActions: ["CSB"]
  */
 import React from 'react';
-import Button from '../index';
-import '../style/index.less';
+// eslint-disable-next-line node/no-extraneous-import
+import {Button} from 's-design';
 
 export default () => {
   return (

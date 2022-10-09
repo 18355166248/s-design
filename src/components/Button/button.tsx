@@ -1,5 +1,5 @@
 import React, {createRef, forwardRef} from 'react';
-import {tuple} from '../../_utils/type';
+import {tuple} from '../_utils/type';
 import type {SizeType} from '../config-provider/SizeContext';
 import classNames from 'classnames';
 import {ConfigContext} from '../config-provider/ConfigContext';
