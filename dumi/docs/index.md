@@ -1,7 +1,7 @@
 ---
-title: s-design
+title: s-design-jiang
 hero:
-  title: s-design
+  title: s-design-jiang
   desc: React 组件库(业务/非业务)
   actions:
     - text: SMegalo
@@ -16,13 +16,13 @@ hero:
 
 ```bash
 // 安装依赖
-npm i s-design --save
+npm i s-design-jiang --save
 
 // 使用 Hooks
-import { Button } from 's-design';
+import { Button } from 's-design-jiang';
 ```
 
-<!-- # s-design
+<!-- # s-design-jiang
 
 ## 介绍
 

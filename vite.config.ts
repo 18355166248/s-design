@@ -39,7 +39,7 @@ export default defineConfig(({mode}: UserConfig) => {
             react: 'react',
             'react-dom': 'react-dom',
           },
-          banner: '/* S-Design version ' + version + ' */',
+          banner: '/* s-design-jiang version ' + version + ' */',
           footer: '/* 关注我 github@18355166248 */',
         },
         plugins: [

@@ -2,6 +2,7 @@ import {join} from 'path';
 import {sideMenu} from './sideMenuData';
 
 export default {
+  title: 's-design-jiang',
   outputPath: '../dist', // 打包到项目根路径
   mode: 'site',
   favicon: '/logo.svg',

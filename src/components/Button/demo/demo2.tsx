@@ -4,7 +4,6 @@
  * hideActions: ["CSB"]
  */
 import React from 'react';
-// eslint-disable-next-line node/no-extraneous-import
 import {Button} from 's-design-jiang';
 
 export default () => {
