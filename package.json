@@ -24,8 +24,7 @@
     "compile": "tsc",
     "fix": "gts fix",
     "pretest": "npm run compile",
-    "posttest": "npm run lint",
-    "publish": "pnpm publish"
+    "posttest": "npm run lint"
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^8.5.0",
