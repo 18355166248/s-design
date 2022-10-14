@@ -2,7 +2,7 @@
   "name": "s-design",
   "version": "0.0.1",
   "description": "SMegalo组件库",
-  "private": true,
+  "private": false,
   "files": ["dist"],
   "main": "./dist/index.es.js",
   "module": "./dist/index.es.js",
