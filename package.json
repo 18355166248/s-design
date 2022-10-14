@@ -1,7 +1,7 @@
 {
   "name": "s-design-jiang",
   "version": "0.0.1",
-  "description": "SMegalo组件库",
+  "description": "SMegalo组件库-ces",
   "private": false,
   "files": ["dist"],
   "main": "./dist/index.es.js",
