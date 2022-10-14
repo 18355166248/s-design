@@ -5,7 +5,7 @@
  */
 import React from 'react';
 // eslint-disable-next-line node/no-extraneous-import
-import {Button} from 's-design';
+import {Button} from 's-design-jiang';
 
 export default () => {
   return (
