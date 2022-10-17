@@ -3,6 +3,6 @@ packages/**/*.mdx
 package.json
 .umi
 .umi-production
-src/components/style/color/bezierEasing.less
-src/components/style/color/colorPalette.less
-src/components/style/color/tinyColor.less
+packages/jiang-design/src/components/style/color/bezierEasing.less
+packages/jiang-design/src/components/style/color/colorPalette.less
+packages/jiang-design/src/components/style/color/tinyColor.less

@@ -2,14 +2,14 @@ import {join} from 'path';
 import {sideMenu} from './sideMenuData';
 
 export default {
-  title: 's-design-jiang',
+  title: 'jiang-design',
   outputPath: '../dist', // 打包到项目根路径
   mode: 'site',
   favicon: '/logo.svg',
   logo: '/logo.svg',
   dynamicImport: {}, // 是否启用按需加载
   resolve: {
-    includes: ['docs', '../src/components'],
+    includes: ['docs', 'packages/jiang-design/src'],
   },
   navs: [
     {title: '设计', path: '/introduce'},

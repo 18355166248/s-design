@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
+  "extends": "../../node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     // "rootDir": ".",
     // "outDir": "build",
@@ -20,5 +20,5 @@
     "jsx": "react-jsx"
   },
   "include": ["packages/jiang-design/src/**/*.ts", "test/**/*.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{"path": "../../tsconfig.node.json"}]
 }

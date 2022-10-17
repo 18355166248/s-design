@@ -1,0 +1,30 @@
+{
+  "name": "jiang-design",
+  "version": "0.0.4",
+  "description": "组件库",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build-html": "tsc && vite build --mode html",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "classnames": "^2.3.2",
+    "react": "17",
+    "react-dom": "17",
+    "vite": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "add": "^2.0.6",
+    "less": "^4.1.3"
+  }
+}

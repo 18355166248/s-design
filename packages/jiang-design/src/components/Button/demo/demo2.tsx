@@ -4,7 +4,7 @@
  * hideActions: ["CSB"]
  */
 import React from 'react';
-import {Button} from 's-design-jiang';
+import {Button} from 'jiang-design';
 
 export default () => {
   return (

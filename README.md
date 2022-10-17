@@ -1,4 +1,4 @@
-# s-design-jiang 组件库
+# jiang-design 组件库
 
 ## 坑
 
